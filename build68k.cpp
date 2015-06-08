@@ -270,15 +270,15 @@ int main(int argc, char **argv)
 				if (fgets(fm, sizeof fm, tablef) != fm) {
 					abort();
 				}
-				if (!strnicmp(fm, "fea", 3))
+				if (!_strnicmp(fm, "fea", 3))
 					fetchmode = 1;
-				if (!strnicmp(fm, "cea", 3))
+				if (!_strnicmp(fm, "cea", 3))
 					fetchmode = 2;
-				if (!strnicmp(fm, "fiea", 4))
+				if (!_strnicmp(fm, "fiea", 4))
 					fetchmode = 3;
-				if (!strnicmp(fm, "ciea", 4))
+				if (!_strnicmp(fm, "ciea", 4))
 					fetchmode = 4;
-				if (!strnicmp(fm, "jea", 3))
+				if (!_strnicmp(fm, "jea", 3))
 					fetchmode = 5;
 			}
 			getnextch();
