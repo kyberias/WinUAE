@@ -736,6 +736,9 @@
     <ClCompile Include="..\..\archivers\zip\ioapi.cpp">
       <Filter>unpackers\zip</Filter>
     </ClCompile>
+    <ClCompile Include="..\staticstubs.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\resources\35floppy.ico">
