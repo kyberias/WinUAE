@@ -210,8 +210,8 @@ bool ethernet_enumerate (struct netdriverdata **nddp, const TCHAR *name)
 #ifdef WITH_UAENET_PCAP
 	nd = uaenet_enumerate (NULL);
 	if (nd) {
-		for (int i = 0; i < nd[i].active; i++) {
-			nddp[j++] = nd;
+		for (int i = 0; nd[i].active; i++) {
+			nddp[j++] = &nd[i];
 		}
 	}
 #endif

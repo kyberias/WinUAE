@@ -314,7 +314,12 @@ struct netdriverdata *uaenet_enumerate (const TCHAR *name)
 	TCHAR *ss;
 
 	if (enumerated) {
-		return enumit (name);
+		if (name) {
+			return enumit(name);
+		}
+		else {
+			return tds;
+		}
 	}
 	tcp = tds;
 	hm = LoadLibrary (_T("wpcap.dll"));
@@ -414,7 +419,11 @@ struct netdriverdata *uaenet_enumerate (const TCHAR *name)
 	done = 1;
 	pcap_freealldevs (alldevs);
 	enumerated = 1;
-	return enumit (name);
+	if(name != NULL) { 
+		return enumit(name);
+	} else {
+		return tds;
+	}
 }
 
 void uaenet_close_driver (struct netdriverdata *tc)
